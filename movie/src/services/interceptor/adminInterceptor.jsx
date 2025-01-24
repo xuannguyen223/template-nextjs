@@ -8,13 +8,12 @@ export const adminHttp = axios.create({
 
 // request
 adminHttp.interceptors.request.use((request) => {
-  if (typeof window !== "undefined") {
-    request.headers = {
-      ...request.headers,
-      Authorization: "Bearer " + localStorage.getItem(ACCESS_TOKEN),
-      TokenCybersoft: TOKEN_CYBERSOFT,
-    };
-  }
+  request.headers = {
+    ...request.headers,
+    Authorization: "Bearer " + localStorage.getItem(ACCESS_TOKEN),
+    TokenCybersoft: TOKEN_CYBERSOFT,
+  };
+
   return request;
 });
 

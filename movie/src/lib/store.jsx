@@ -4,7 +4,7 @@ import adminSlide from "./features/admin/adminSlide";
 export const store = () => {
   return configureStore({
     reducer: {
-      admin: adminSlide,
+      adminSlide: adminSlide,
     },
   });
 };
