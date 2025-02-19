@@ -9,5 +9,6 @@ export default function StoreProvider({ children }) {
     // Create the store instance the first time this renders
     storeRef.current = store();
   }
+  console.log("Bla blu");
   return <Provider store={storeRef.current}>{children}</Provider>;
 }
